@@ -19,3 +19,58 @@ else:
     else:
         print('Треугольник равнобедренный')
 
+#✔ Напишите код, который запрашивает число и сообщает является ли оно простым или составным.
+#Используйте правило для проверки: «Число является простым, если делится нацело только на единицу
+#и на себя». Сделайте ограничение на ввод отрицательных чисел и чисел больше 100 тысяч.
+
+LOWER_LIMIT = 0
+UPPER_LIMIT =  100_000
+num = int(input(f'Введите целое число больше {LOWER_LIMIT} до {UPPER_LIMIT}: '))
+m = 1
+count = 1
+LIM = 2
+
+while num <= LOWER_LIMIT or num > UPPER_LIMIT:
+    if num <= LOWER_LIMIT:
+        num = int(input(f'Введите целое число больше {LOWER_LIMIT}: '))
+    elif num > UPPER_LIMIT:
+        num = int(input(f'Введите целое число меньше {UPPER_LIMIT}: '))
+
+while num > m and count < (LIM+1):
+    if num % m == 0:
+        m += 1
+        count += 1
+    else:
+        m += 1
+
+if count == LIM:
+    print('Число простое')
+else:
+    print('Число составное')
+
+# Программа загадывает число от 0 до 1000. Необходимо угадать число за 10 попыток. Программа
+# должна подсказывать «больше» или «меньше» после каждой попытки. Для генерации случайного
+# числа используйте код:
+
+from random import randint
+LOWER_LIMIT = 0
+UPPER_LIMIT = 1000
+times = 10
+count = 0
+
+num = randint(LOWER_LIMIT, UPPER_LIMIT)
+find_num = int(input(f'Мы загадали число, отгадайте его. Введите целое число от {LOWER_LIMIT} до {UPPER_LIMIT}: '))
+
+while count < times-1:
+    if num > find_num:
+        find_num = int(input(f'Ваше число меньше загаданного. Осталось {times-1-count} попытки(ок), введите другое число: '))
+        count +=1
+    elif num < find_num:
+        find_num = int(input(f'Ваше число больше загаданного. Осталось {times-1-count} попытки(ок), введите другое число: '))
+        count +=1
+    else:
+        print('Вы угадали! Ура!')
+        break
+
+if num != find_num and count == times-1:
+    print( 'Вы не угадали и у Вас больше нет попыток! :(')
