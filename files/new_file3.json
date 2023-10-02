@@ -1,0 +1,40 @@
+{
+  "Directory": {
+    "files": {
+      "__pycache__": "1277",
+      "my_files": "40"
+    },
+    "__pycache__": {},
+    "my_files": {
+      "1": "0"
+    },
+    "1": {}
+  },
+  "Files": {
+    "files": {
+      "main_rename.py": "356",
+      "new_file.txt": "115",
+      "add_jason.py": "1680",
+      "new_file1.txt": "412",
+      "rename_files.py": "1839",
+      "__init__.py": "0",
+      "new_file1.json": "42",
+      "new_file.json": "1016",
+      "new_file.csv": "863",
+      "Seminar_7.py": "1234",
+      "res.txt": "790",
+      "new_file3.json": "876",
+      "to_json.py": "1008",
+      "walk_directory.py": "3112"
+    },
+    "__pycache__": {
+      "rename_files.cpython-311.pyc": "1277"
+    },
+    "my_files": {
+      "this_my_file_001.txt": "15",
+      "this_my_file_002.txt": "25",
+      "this_my_file_003.txt": "0"
+    },
+    "1": {}
+  }
+}

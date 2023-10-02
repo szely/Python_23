@@ -16,7 +16,7 @@ def func_sum(file1, file2):
     with (
         open(file1, 'r', encoding='utf-8') as f1,
         open(file2, 'r', encoding='utf-8') as f2,
-        open('res.txt','w', encoding='utf-8') as res):
+        open('res.txt', 'w', encoding='utf-8') as res):
         digit = f1.readlines()
         name = f2.readlines()
         max_len = max(len(digit), len(name))
